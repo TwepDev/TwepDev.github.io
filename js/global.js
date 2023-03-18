@@ -215,14 +215,14 @@ async function _runGlobal() {
   V = JSON.parse(cacheData);
   VIdx = V.length - 1;
   
-  document.getElementById("showSidebar")?.addEventListener("click", function () {
-    document.getElementById("sidebarContainer").classList.add("show");
-    document.getElementById("overlay").style.display = "block"
+  select("#showSidebar")?.addEventListener("click", function () {
+    select("#sidebarContainer").classList.add("show");
+    select("#overlay").style.display = "block"
   })
 
-  document.getElementById("overlay")?.addEventListener("click", function () {
-    document.getElementById("sidebarContainer").classList.remove("show");
-    document.getElementById("overlay").style.display = "none"
+  select("#overlay")?.addEventListener("click", function () {
+    select("#sidebarContainer").classList.remove("show");
+    select("#overlay").style.display = "none"
   })
   
   displayText('#priceApy', `${COMMA(INT((1 + rePrBase)**365 * 100, 2))}%`);

@@ -203,7 +203,7 @@ let lockedDuration;
 let totalSupplyPercentage;
 async function _runPersonal() {
 
-  // var checkBox = document.getElementById("alerts");
+  // var checkBox = select("#alerts");
   // if (checkBox.checked == true) {
   //   // make alerts off
   // } else {
@@ -932,11 +932,11 @@ async function maxPweb3Input(id) {
 }
 
 select("#showSidebar").addEventListener("click", function () {
-  document.getElementById("sidebarContainer").classList.add("show");
-  document.getElementById("overlay").style.display = "block"
+  select("#sidebarContainer").classList.add("show");
+  select("#overlay").style.display = "block"
 })
 
 select("#overlay").addEventListener("click", function () {
-  document.getElementById("sidebarContainer").classList.remove("show");
-  document.getElementById("overlay").style.display = "none"
+  select("#sidebarContainer").classList.remove("show");
+  select("#overlay").style.display = "none"
 })

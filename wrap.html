@@ -602,16 +602,16 @@ document.addEventListener("DOMContentLoaded", function() {
 //MINER FUNCTIONS===================================================================================================================================================
 
 function showValue1(newValue) {
-        document.getElementById("days").innerHTML= newValue;
+        select("#days").innerHTML= newValue;
       }
 
     function changeRangeValue(val){
-        document.getElementById("days-slider").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        select("#days-slider").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
         showValue1(val);
     }
 
     function changeInputValue(val){
-        document.getElementById("days-sliders").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        select("#days-sliders").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
         showValue1(val);
     }
 
@@ -659,18 +659,18 @@ async function boxOpening() {
           armyImgUrl = armyJsonData['image']
         }
       }
-      document.getElementById("unBox").style.display = 'none';
-      document.getElementById("video").style.display = 'block';
-      vid = document.getElementById("vid");
+      select("#unBox").style.display = 'none';
+      select("#video").style.display = 'block';
+      vid = select("#vid");
       vid.play();
       setInterval(() => {
-      // document.getElementById("unBox").style.display = 'block';
+      // select("#unBox").style.display = 'block';
       // var createNft = document.createElement('img');
       // createNft.src = './images/circledlogo.png';
       // console.log(createNft);
-      document.getElementById("showNFT").src = armyImgUrl;
+      select("#showNFT").src = armyImgUrl;
 
-      document.getElementById("video").style.display = 'none';
+      select("#video").style.display = 'none';
       }, 2000);
     }
     function checkValue(val) {
@@ -1005,7 +1005,7 @@ async function boxOpening() {
    </script>
    
    <script>
-      document.getElementById("rangeTab1").oninput = function () {
+      select("#rangeTab1").oninput = function () {
   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
   this.style.background =
     "linear-gradient(to right, #22d4f3 0%, #22d4f3 " +
@@ -1014,7 +1014,7 @@ async function boxOpening() {
     value +
     "%, #113048 100%)";
 };
-document.getElementById("rangeTab2").oninput = function () {
+select("#rangeTab2").oninput = function () {
   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
   this.style.background =
     "linear-gradient(to right, #22d4f3 0%, #22d4f3 " +
@@ -1023,7 +1023,7 @@ document.getElementById("rangeTab2").oninput = function () {
     value +
     "%, #113048 100%)";
 };
-document.getElementById("rangeTab3").oninput = function () {
+select("#rangeTab3").oninput = function () {
   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
   this.style.background =
     "linear-gradient(to right, #22d4f3 0%, #22d4f3 " +
@@ -1033,8 +1033,8 @@ document.getElementById("rangeTab3").oninput = function () {
     "%, #113048 100%)";
 };
 // -- tab1
-const rangeTab1 = document.getElementById("rangeTab1"),
-  daysValTab1 = document.getElementById("daysValTab1"),
+const rangeTab1 = select("#rangeTab1"),
+  daysValTab1 = select("#daysValTab1"),
   setValueTab1 = () => {
     const newValue = Number(
       ((rangeTab1.value - rangeTab1.min) * 89) / (rangeTab1.max - rangeTab1.min)
@@ -1046,8 +1046,8 @@ rangeTab1.addEventListener("input", setValueTab1);
 
 // --tab2
 
-const rangeTab2 = document.getElementById("rangeTab2"),
-  daysValTab2 = document.getElementById("daysValTab2"),
+const rangeTab2 = select("#rangeTab2"),
+  daysValTab2 = select("#daysValTab2"),
   setValueTab2 = () => {
     const newValue = Number(
       ((rangeTab2.value - rangeTab2.min) * 89) / (rangeTab2.max - rangeTab2.min)
@@ -1059,8 +1059,8 @@ rangeTab2.addEventListener("input", setValueTab2);
 
 // -- tab3
 
-const rangeTab3 = document.getElementById("rangeTab3"),
-  daysValTab3 = document.getElementById("daysValTab3"),
+const rangeTab3 = select("#rangeTab3"),
+  daysValTab3 = select("#daysValTab3"),
   setValueTab3 = () => {
     const newValue = Number(
       ((rangeTab3.value - rangeTab3.min) * 89) / (rangeTab3.max - rangeTab3.min)
