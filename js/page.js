@@ -24,42 +24,52 @@ function htmlSocials(url, icon) {
 
 function displaySidebar() {
   let htmlStr = `
-        <div id="sidebar" class="d-flex flex-column align-items-center py-4">
-          <a id="logo" href="https://www.theweb3project.com" class="text-decoration-none d-flex align-items-center p-3">
-            <img src="./images/logos/randomlogo.png" alt="logo-icon" class="col-12">
-          </a>
-
-          <ul id="sidebar-nav" class="list-unstyled py-1">
-
-
-            ${htmlSide('index.html', 'collection', 'Dashboard')}
-            ${htmlSide('account.html', 'person-circle', 'Account')}
-            ${htmlSide('calculator.html', 'calculator-fill', 'Calculator')}
-            ${htmlSide('swap.html', 'shuffle', 'Swap')}
-            ${htmlSide('wrap.html', 'currency-exchange', 'Wrap')}
-            ${htmlSide('web-pointshop.html', 'shop', 'Point Shop')}
-            ${htmlSide('miner.html', 'minecart-loaded', 'Miner')}
-            ${htmlSide('wusd.html', 'wallet2', 'WUSD')}
-            ${htmlSide('xweb.html', 'bank', 'xWEB3')}
-            ${htmlSide('https://docs.theweb3project.com', 'journal-text', 'Docs')}
-          </ul>
-
-          <div class="d-flex justify-content-around px-4">
-
-            ${htmlSocials('https://t.me/TheWeb3Project', 'send-fill')}
-            ${htmlSocials('https://twitter.com/TheWeb3Project', 'twitter')}
-            ${htmlSocials('https://discord.gg/crQkCE7Mn6', 'discord')}
-            ${htmlSocials('https://www.youtube.com/c/TheWeb3Project', 'youtube')}
-          </div>
-          <div class="d-flex justify-content-between ">
-          <input type="checkbox" class="mt-1 " name="alerts" id="alerts">
-          <p class>Turn off alerts</p>
-          </div>
-        </div>
-
-
-        `;
-  select('#sidebarContainer').innerHTML = htmlStr;
+    <div class="logo">
+      <a href="https://twepv2.com"><img src="images/Logo.svg" alt="TWEP-Logo" /></a>
+    </div>
+    <hr class="hide-m" />
+    <div class="side-tabs-list">
+      <ul class="side-tabs-ul nav-pills">
+          <li class="side-tab-li tab-active background-box1"><span><i
+                  class="dashboard"></i>Dashboard</span></li>
+          <li class="side-tab-li" onclick="onChangeMenu('swap')"><span><i class="swap"></i>Swap</span></li>
+          <li class="side-tab-li" id="legacy" onclick="show()"><span><i class="legacy"></i>Legacy<i class="d-own"></i></span></li>
+          <li class="dropdown-container hidden" hidden id="cont">
+          <a onclick="onChangeMenu('wrap')">Wrap</a>
+          <a onclick="onChangeMenu('pointshop')" href="#">Pointshop</a>
+          <a onclick="onChangeMenu('miner')">Miner</a>
+          <a onclick="onChangeMenu('wusd')">WUSD</a>
+          <a onclick="onChangeMenu('xweb3')">xWEB3</a>
+          </li>
+          <li class="side-tab-li" onclick="window.open('https://docs.twepv2.com','_blank')"><span><i class="docs"></i>Docs</span></li>
+      </ul>
+    </div>
+    <hr />
+    <div class="social-icons-div">
+      <ul>
+        <li>
+          <a href="https://t.me/twepTG" target="_blank"><i class="telegram"></i></a>
+        </li>
+        <li>
+          <a href="https://discord.gg/QC7bH89upf" target="_blank"><i class="discord"></i></a>
+        </li>
+        <li>
+          <a href="https://twitter.com/twepv2" target="_blank"><i class="twitter"></i></a>
+        </li>
+        <li>
+          <a href="https://youtube.com/@twepv2" target="_blank"><i class="youtube"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="alert-div">
+      <p class="turnmsg">Turn on alerts</p>
+      <label class="switch">
+          <input type="checkbox" id="turnon"  onclick="turnOnfunction()"/>
+          <span class="slider round"></span>
+      </label>
+    </div>
+    `;
+  select('#side-nav').innerHTML = htmlStr;
 }
 displaySidebar();
 
