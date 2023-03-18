@@ -21,7 +21,7 @@ function htmlSocials(url, icon) {
 
   return htmlStr;
 }
-
+window.location.href='/'+fileName+'.html'
 function displaySidebar() {
   let htmlStr = `
     <div class="logo">
@@ -30,9 +30,9 @@ function displaySidebar() {
     <hr class="hide-m" />
     <div class="side-tabs-list">
       <ul class="side-tabs-ul nav-pills">
-          <li class="side-tab-li tab-active background-box1"><span><i
+          <li class="side-tab-li" id="side-tabs-ul"><span><i
                   class="dashboard"></i>Dashboard</span></li>
-          <li class="side-tab-li" onclick="onChangeMenu('swap')"><span><i class="swap"></i>Swap</span></li>
+          <li class="side-tab-li" id="side-tabs-ul" onclick="onChangeMenu('swap')"><span><i class="swap"></i>Swap</span></li>
           <li class="side-tab-li" id="legacy" onclick="show()"><span><i class="legacy"></i>Legacy<i class="d-own"></i></span></li>
           <li class="dropdown-container hidden" hidden id="cont">
           <a onclick="onChangeMenu('wrap')">Wrap</a>
@@ -41,7 +41,7 @@ function displaySidebar() {
           <a onclick="onChangeMenu('wusd')">WUSD</a>
           <a onclick="onChangeMenu('xweb3')">xWEB3</a>
           </li>
-          <li class="side-tab-li" onclick="window.open('https://docs.twepv2.com','_blank')"><span><i class="docs"></i>Docs</span></li>
+          <li class="side-tab-li" id="side-tabs-ul" onclick="window.open('https://docs.twepv2.com','_blank')"><span><i class="docs"></i>Docs</span></li>
       </ul>
     </div>
     <hr />
@@ -75,24 +75,32 @@ displaySidebar();
 
 function displayWeb3Header() {
   let htmlStr = `
-  <div class="d-flex pt-3 px-sm-3">
-    <button type="button" id="showSidebar" class="d-lg-none btn fs-5"><i class="bi bi-list"></i></button>
-
-    <div class="dropdown ms-auto">
-      <button class="btn rounded-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="0,14">
-        <span class="fw-medium ms-1">TWEP</span> <span id="price" class="ms-1 small text-secondary">$0</span>
-      </button>
-
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton1">
-
-        <li><a class="dropdown-item" href="https://poocoin.app/tokens/0x333fd139caef6aa31056cc905987b77b1044d259">Chart</a></li>
-      </ul>
+    <div class="logo1">
+        <a href="https://www.theweb3project.com/"><img src="images/Logo.svg" alt="TWEP-Logo" /></a>
     </div>
-
-    <button id="connect" type="button" class="btn rounded-1 ms-3">
-      Connect Wallet
-    </button>
-  </div>`;
+    <div class="head-title"><i class='title-image dashboard'></i>Dashboard</div>
+    <div class="hum-burgur-div" id="test-check-hum">
+        <input type="checkbox" class="menu-btn" id="hm-burg" onclick="executefunction()" />
+        <label class="menu-icon" for="hm-burg">
+        <span class="nav-icon"></span>
+        </label>
+      
+    </div>
+    <div class="wallet-div">
+        <div class="w-value">
+          <a class="background-box" href="https://poocoin.app/tokens/0x1aeb3f66d96bfaf74fcbd15dc21798de36f6f933" target="_blank">
+              <i class="twep-icon"></i>TWEP <span> <h4 id="price" class="fw-bold">$0</h4></span>
+          </a>
+        </div>
+        <div class="con-wallet" id="connect">
+          <!-- Page.js line 66 -->
+          <a href="#">
+              Connect Wallet
+              <!-- <i class="go-icon"></i> -->
+          </a>
+        </div>
+    </div>
+  `;
   select('#web3-header').innerHTML = htmlStr;
   select('#web3-header').classList = "w-100 position-fixed end-0 top-0";
   select('#web3-header').style = "height: 68px; z-index: 100001;"
