@@ -402,9 +402,9 @@
 
 
 // DOM Elements
-const tabs = document.querySelectorAll('.tab')
-const tabContents = document.querySelectorAll('.tabcontent')
-const darkModeSwitch = document.querySelector('#dark-mode-switch')
+const tabs = select('.tab')
+const tabContents = select('.tabcontent')
+const darkModeSwitch = select('#dark-mode-switch')
 
 // Functions
 const activateTab = tabnum => {
@@ -417,8 +417,8 @@ const activateTab = tabnum => {
         tabContent.classList.remove('active')
     })
 
-    document.querySelector('#tab' + tabnum).classList.add('active')
-    document.querySelector('#tabcontent' + tabnum).classList.add('active')
+    select('#tab' + tabnum).classList.add('active')
+    select('#tabcontent' + tabnum).classList.add('active')
     localStorage.setItem('jstabs-opentab', JSON.stringify(tabnum))
 
 }
@@ -431,7 +431,7 @@ tabs.forEach(tab => {
 })
 
 darkModeSwitch.addEventListener('change', () => {
-    document.querySelector('body').classList.toggle('darkmode')
+    select('body').classList.toggle('darkmode')
     // localStorage.setItem('jstabs-darkmode', JSON.stringify(!darkmode))
 })
 
@@ -441,11 +441,11 @@ const opentab =  JSON.parse(localStorage.getItem('jstabs-opentab')) || '3'
 
 // and..... Action!
 if (darkmode === null) {
-  document.querySelector('body').classList.add('darkmode')
+  select('body').classList.add('darkmode')
 }
 if (darkmode) {
-    document.querySelector('body').classList.add('darkmode')
-    document.querySelector('#dark-mode-switch').checked = 'checked'
+    select('body').classList.add('darkmode')
+    select('#dark-mode-switch').checked = 'checked'
 }
 activateTab(opentab)
 
