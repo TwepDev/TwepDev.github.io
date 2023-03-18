@@ -305,7 +305,7 @@ async function addEvent(name, event_) {
 let lastBlock;
 let lastSupply = 0;
 async function eventBoard() {
-  let txLogs;
+  let txLogs = [];
 
   if (CURBLOCK == undefined) {
     return;
@@ -930,3 +930,13 @@ async function maxPweb3Input(id) {
   select(id).value = v;
   setXweb3Value(v);
 }
+
+select("#showSidebar").addEventListener("click", function () {
+  document.getElementById("sidebarContainer").classList.add("show");
+  document.getElementById("overlay").style.display = "block"
+})
+
+select("#overlay").addEventListener("click", function () {
+  document.getElementById("sidebarContainer").classList.remove("show");
+  document.getElementById("overlay").style.display = "none"
+})
