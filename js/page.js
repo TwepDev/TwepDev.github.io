@@ -30,8 +30,7 @@ function displaySidebar() {
     <hr class="hide-m" />
     <div class="side-tabs-list">
       <ul class="side-tabs-ul nav-pills">
-          <li class="side-tab-li" id="side-tabs-ul"><span><i
-                  class="dashboard"></i>Dashboard</span></li>
+          <li class="side-tab-li" id="side-tabs-ul" onclick="onChangeMenu('index')"><span><i class="dashboard"></i>Dashboard</span></li>
           <li class="side-tab-li" id="side-tabs-ul" onclick="onChangeMenu('swap')"><span><i class="swap"></i>Swap</span></li>
           <li class="side-tab-li" id="legacy" onclick="show()"><span><i class="legacy"></i>Legacy<i class="d-own"></i></span></li>
           <li class="dropdown-container hidden" hidden id="cont">
