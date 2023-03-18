@@ -440,7 +440,7 @@ async function _runGlobal() {
   }, 1000);
 
   setInterval(async () => {
-    await eventBoard();
+    //await eventBoard();
   }, 10000);
 
   select('#buy-box').onclick = async () => { await boxOpening(); };
