@@ -383,48 +383,48 @@ async function _runGlobal() {
     }
   }, 5000);
 
-  setInterval(function () {
+  // setInterval(function () {
     
-    if (isNaN(jackpotTimeLeft)) {
-      return;
-    }
+  //   if (isNaN(jackpotTimeLeft)) {
+  //     return;
+  //   }
 
-    if (jackpotTimeLeft <= 0) {
-      return;
-    }
+  //   if (jackpotTimeLeft <= 0) {
+  //     return;
+  //   }
     
-    if (jpAlarmed == false) {
-      if (jackpotTimeLeft < 100) {
-        alert("100 seconds left for jackpot!");
-        jpAlarmed = true;
-      }
-    }
+  //   if (jpAlarmed == false) {
+  //     if (jackpotTimeLeft < 100) {
+  //       alert("100 seconds left for jackpot!");
+  //       jpAlarmed = true;
+  //     }
+  //   }
 
-    displayText("#jpTimer", `${INT(jackpotTimeLeft / 60)}m ${jackpotTimeLeft % 60}s`);            
-    jackpotTimeLeft = UPDATETICK(jackpotTimeLeft);
-  }, 1000);
+  //   displayText("#jpTimer", `${INT(jackpotTimeLeft / 60)}m ${jackpotTimeLeft % 60}s`);            
+  //   jackpotTimeLeft = UPDATETICK(jackpotTimeLeft);
+  // }, 1000);
 
-  setInterval(function () {
-    if (isNaN(bigbuyTimeLeft)) {
-      return;
-    }
+  // setInterval(function () {
+  //   if (isNaN(bigbuyTimeLeft)) {
+  //     return;
+  //   }
 
-    if (bigbuyTimeLeft <= 0) {
-      return;
-    }
+  //   if (bigbuyTimeLeft <= 0) {
+  //     return;
+  //   }
     
-    if (bigbuyAlarmed == false) {
-			if (1 <= jpPrize) {
-				if (bigbuyTimeLeft < 600) {
-					alert("10 minutes left for big buy jackpot!");
-					bigbuyAlarmed = true;
-				}
-			}
-    }
+  //   if (bigbuyAlarmed == false) {
+	// 		if (1 <= jpPrize) {
+	// 			if (bigbuyTimeLeft < 600) {
+	// 				alert("10 minutes left for big buy jackpot!");
+	// 				bigbuyAlarmed = true;
+	// 			}
+	// 		}
+  //   }
     
-    displayText("#biggestTimer", `${INT((bigbuyTimeLeft % 86400) / 3600)}h ${INT((bigbuyTimeLeft % 3600) / 60)}m ${bigbuyTimeLeft % 60}s`);            
-    bigbuyTimeLeft = UPDATETICK(bigbuyTimeLeft);
-  }, 1000);
+  //   displayText("#biggestTimer", `${INT((bigbuyTimeLeft % 86400) / 3600)}h ${INT((bigbuyTimeLeft % 3600) / 60)}m ${bigbuyTimeLeft % 60}s`);            
+  //   bigbuyTimeLeft = UPDATETICK(bigbuyTimeLeft);
+  // }, 1000);
 
   displayText("#cb", `OFF`);
   displayText("#tax", `14%/16%`);
