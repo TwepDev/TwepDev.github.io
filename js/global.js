@@ -55,6 +55,16 @@ async function setFs() {
     return v;
   };
 
+  F['bnbBalance'] = async () => {
+    return 0;
+  };
+
+  for (let name of ['web3', 'twep', 'wweb3', 'pweb3', 'xweb3', 'wusd', 'busd', 'miner']) {
+    F[`${name}Balance`] = async () => {
+      return 0;
+    };
+  }
+
   F['trustFundBalance'] = async() => {
     let trustFundAdr = "0x5060E2fBB789c021C9b510e2eFd9Bf965e6a2475";
     let v = (await getBalance(trustFundAdr)) / BNBDIV * (await gV('bnbPrice'));
