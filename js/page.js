@@ -29,9 +29,9 @@ function displaySidebar() {
     </div>
     <hr class="hide-m" />
     <div class="side-tabs-list">
-      <ul class="side-tabs-ul nav-pills">
-          <li class="side-tab-li" id="side-tabs-ul" onclick="onChangeMenu('index')"><span><i class="dashboard"></i>Dashboard</span></li>
-          <li class="side-tab-li" id="side-tabs-ul" onclick="onChangeMenu('swap')"><span><i class="swap"></i>Swap</span></li>
+      <ul class="side-tabs-ul nav-pills" id="side-tabs-ul">
+          <li class="side-tab-li" onclick="onChangeMenu('index')"><span><i class="dashboard"></i>Dashboard</span></li>
+          <li class="side-tab-li" onclick="onChangeMenu('swap')"><span><i class="swap"></i>Swap</span></li>
           <li class="side-tab-li" id="legacy" onclick="show()"><span><i class="legacy"></i>Legacy<i class="d-own"></i></span></li>
           <li class="dropdown-container hidden" hidden id="cont">
             <a onclick="onChangeMenu('wrap')">Wrap</a>
@@ -40,7 +40,7 @@ function displaySidebar() {
             <a onclick="onChangeMenu('wusd')">WUSD</a>
             <a onclick="onChangeMenu('xweb3')">xWEB3</a>
           </li>
-          <li class="side-tab-li" id="side-tabs-ul" onclick="window.open('https://docs.twepv2.com','_blank')"><span><i class="docs"></i>Docs</span></li>
+          <li class="side-tab-li" onclick="window.open('https://docs.twepv2.com','_blank')"><span><i class="docs"></i>Docs</span></li>
       </ul>
     </div>
     <hr />
