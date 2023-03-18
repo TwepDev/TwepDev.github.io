@@ -21,7 +21,7 @@ function htmlSocials(url, icon) {
 
   return htmlStr;
 }
-window.location.href='/'+fileName+'.html'
+
 function displaySidebar() {
   let htmlStr = `
     <div class="logo">
@@ -34,11 +34,11 @@ function displaySidebar() {
           <li class="side-tab-li" id="side-tabs-ul" onclick="onChangeMenu('swap')"><span><i class="swap"></i>Swap</span></li>
           <li class="side-tab-li" id="legacy" onclick="show()"><span><i class="legacy"></i>Legacy<i class="d-own"></i></span></li>
           <li class="dropdown-container hidden" hidden id="cont">
-          <a onclick="onChangeMenu('wrap')">Wrap</a>
-          <a onclick="onChangeMenu('pointshop')" href="#">Pointshop</a>
-          <a onclick="onChangeMenu('miner')">Miner</a>
-          <a onclick="onChangeMenu('wusd')">WUSD</a>
-          <a onclick="onChangeMenu('xweb3')">xWEB3</a>
+            <a onclick="onChangeMenu('wrap')">Wrap</a>
+            <a onclick="onChangeMenu('pointshop')" href="#">Pointshop</a>
+            <a onclick="onChangeMenu('miner')">Miner</a>
+            <a onclick="onChangeMenu('wusd')">WUSD</a>
+            <a onclick="onChangeMenu('xweb3')">xWEB3</a>
           </li>
           <li class="side-tab-li" id="side-tabs-ul" onclick="window.open('https://docs.twepv2.com','_blank')"><span><i class="docs"></i>Docs</span></li>
       </ul>
