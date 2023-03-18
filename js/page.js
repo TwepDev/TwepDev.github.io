@@ -674,6 +674,8 @@ async function switchTarget(states, target, handleFs, bals, logos, syms, runFs) 
 
 
 
+
+
 async function runBuy() {
   let bnbInput = select('#swap-input');
   await SEND_TX('router', 'swapExactETHForTokensSupportingFeeOnTransferTokens', [0, [ADRS['wbnb'], ADRS['twep']], CURADR, NOW() + 10 ** 6], String(bnbInput.value));
@@ -947,6 +949,11 @@ async function maxPweb3Input(id) {
   select(id).value = v;
   setXweb3Value(v);
 }
+
+
+
+
+
 
 select("#showSidebar").addEventListener("click", function () {
   select("#sidebarContainer").classList.add("show");
