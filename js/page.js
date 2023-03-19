@@ -74,37 +74,38 @@ displaySidebar();
 
 function displayWeb3Header() {
   let htmlStr = `
-    <div class="logo1">
-        <a href="https://www.theweb3project.com/"><img src="images/Logo.svg" alt="TWEP-Logo" /></a>
+  <div class="logo1">
+    <a href="https://twepv2.com/"><img src="images/Logo.svg" alt="TWEP-Logo" /></a>
+  </div>
+  <div class="head-title">
+  <i class='title-image swap'></i>Swap
+  </div>
+  <div class="hum-burgur-div" id="test-check-hum">
+    <input type="checkbox" class="menu-btn" id="hm-burg" onclick="executefunction()" />
+  <label class="menu-icon" for="hm-burg">
+  <span class="nav-icon"></span>
+  </label>
+    <!-- <input type="checkbox" id="hm-burg" onclick="executefunction()" />
+    <label for="hm-burg">
+      <span></span>
+    </label> -->
+  </div>
+  <div class="wallet-div">
+    <div class="w-value">
+      <a class="background-box" href="https://poocoin.app/tokens/0x1aeb3f66d96bfaf74fcbd15dc21798de36f6f933" target="_blank">
+        <i class="twep-icon"></i>TWEP <span> <h4 id="price" class="fw-bold">$0</h4></span>
+      </a>
     </div>
-    <div class="head-title"><i class='title-image dashboard'></i>Dashboard</div>
-    <div class="hum-burgur-div" id="test-check-hum">
-        <input type="checkbox" class="menu-btn" id="hm-burg" onclick="executefunction()" />
-        <label class="menu-icon" for="hm-burg">
-        <span class="nav-icon"></span>
-        </label>
-      
+    <div class="con-wallet" id="connect">
+      <a href="#">
+        Connect Wallet
+      </a>
     </div>
-    <div class="wallet-div">
-        <div class="w-value">
-          <a class="background-box" href="https://poocoin.app/tokens/0x1aeb3f66d96bfaf74fcbd15dc21798de36f6f933" target="_blank">
-              <i class="twep-icon"></i>TWEP <span> <h4 id="price" class="fw-bold">$0</h4></span>
-          </a>
-        </div>
-        <div class="con-wallet" id="connect">
-          <!-- Page.js line 66 -->
-          <a href="#">
-              Connect Wallet
-              <!-- <i class="go-icon"></i> -->
-          </a>
-        </div>
-    </div>
+  </div>
   `;
-  select('#web3-header').innerHTML = htmlStr;
-  select('#web3-header').classList = "w-100 position-fixed end-0 top-0";
-  select('#web3-header').style = "height: 68px; z-index: 100001;"
+  select('#upper-div').innerHTML = htmlStr;
 }
-// displayWeb3Header();
+displayWeb3Header();
 
 function setCss() {
   select('#main').classList = 'col';
