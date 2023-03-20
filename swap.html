@@ -222,10 +222,6 @@
 //GLOBAL END============================================================================================================================
 
 
-    async function switchSwap() {
-      await switchTarget(['buy', 'sell'], 'swap', [handleInputBuy, handleInputSell], [(await gV('bnbBalance')), (await gV('twepBalance'))], [BNBICONURL, TOKENICONURL], ["BNB", "TWEP"], [runBuy, runSell]);
-    }
-
 //WRAP FUNCTIONS+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 document.addEventListener("DOMContentLoaded", function() {
 var tabs = select('.tabbed li');
@@ -284,9 +280,6 @@ for (var i = 0, len = switchers.length; i < len; i++) {
     }
   }
 
-  async function switchwrap() {
-    await switchTarget(['wrap', 'unwrap'], 'wrap', [handleInputWrap, handleInputUnwrap], [(await gV('twepBalance')), (await gV('wweb3Balance'))], [TOKENICONURL, TOKENICONURL], ["TWEP", "wWEB3"], [runWrap, runUnwrap]);
-  }
 
 //MINER FUNCTIONS===================================================================================================================================================
 

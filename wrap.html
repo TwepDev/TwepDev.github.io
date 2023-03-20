@@ -598,7 +598,6 @@ async function boxOpening() {
 //RUN PERSONAL START===============================================================================================================================================================
    async function runPersonal() {
          await _runPersonal();
-//swap========================================================================================================================================
 
          let web3Allowance = await CONTS['twep'].allowance(CURADR, ADRS['router']);
         if (BIGINT(0) < web3Allowance) {
@@ -607,9 +606,7 @@ async function boxOpening() {
           select('#run-web3-approve-router').onclick = async () => { await approve('twep', ADRS['router']); };
         }
 
-        STATES['swap'] = 'sell';
-        await switchSwap();
-        select('#swap-change').onclick = async () => { await switchSwap(); };
+
          console.log('twepBalance')
          // check vip
          if (
