@@ -96,8 +96,8 @@ function displayWeb3Header() {
         <i class="twep-icon"></i>TWEP <span> <h4 id="price" class="fw-bold">$0</h4></span>
       </a>
     </div>
-    <div class="con-wallet" id="connect">
-      <a href="#">
+    <div class="con-wallet">
+      <a href="#" id="connect">
         Connect Wallet
       </a>
     </div>
