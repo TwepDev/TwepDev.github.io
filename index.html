@@ -264,14 +264,6 @@
    </div>
    
   
-   <script>
-        let copyButton = select('#copytext1');
-
-copyButton.addEventListener('click', (event) => {
-  let content = select('#content-copy').textContent;
-  navigator.clipboard.writeText(content)
-})
-   </script>
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js" integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script type="text/javascript" src="js/index.js"></script>
@@ -295,6 +287,13 @@ copyButton.addEventListener('click', (event) => {
    <script src="js/global.js"></script>
    <script src="js/page.js"></script>
    <script>
+    let copyButton = select('#copytext1');
+
+    copyButton.addEventListener('click', (event) => {
+      let content = select('#content-copy').textContent;
+      navigator.clipboard.writeText(content)
+    })
+    
       async function makeChart() {
          let web3Prices = [];
          V.forEach(function (e) {
