@@ -104,14 +104,13 @@ function executefunction() {
   var side = select("#side-nav");
   $(document).ready(function () {
     if (checkboxValue == true) {
-      select('#side-nav').add
-      $("#nav").addClass("side-bar");
-      $(".body").addClass("longscroll");
-      side.classList.add("h-set");
+      select('#side-nav').classList.add("side-bar");
+      select('#side-nav').classList.add("h-set");
+      select('.body').classList.add("longscroll");
     } else {
-      $("#nav").removeClass("side-bar");
-      $(".body").removeClass("longscroll");
-      side.classList.remove("h-set");
+      select('#side-nav').classList.remove("side-bar");
+      select('#side-nav').classList.remove("h-set");
+      select('.body').classList.remove("longscroll");
     }
   });
 }
