@@ -313,14 +313,14 @@
   <script src="js/global.js"></script>
   <script src="js/page.js"></script>
   <script>
-    document.getElementById("showSidebar").addEventListener("click", function () {
-      document.getElementById("sidebarContainer").classList.add("show");
-      document.getElementById("overlay").style.display = "block"
+    select("#showSidebar").addEventListener("click", function () {
+      select("#sidebarContainer").classList.add("show");
+      select("#overlay").style.display = "block"
     })
 
-    document.getElementById("overlay").addEventListener("click", function () {
-      document.getElementById("sidebarContainer").classList.remove("show");
-      document.getElementById("overlay").style.display = "none"
+    select("#overlay").addEventListener("click", function () {
+      select("#sidebarContainer").classList.remove("show");
+      select("#overlay").style.display = "none"
     })
   </script>
 
@@ -356,18 +356,18 @@
           armyImgUrl = armyJsonData['image']
         }
       }
-      document.getElementById("unBox").style.display = 'none';
-      document.getElementById("video").style.display = 'block';
-      vid = document.getElementById("vid");
+      select("#unBox").style.display = 'none';
+      select("#video").style.display = 'block';
+      vid = select("#vid");
       vid.play();
       setInterval(() => {
-      // document.getElementById("unBox").style.display = 'block';
+      // select("#unBox").style.display = 'block';
       // var createNft = document.createElement('img');
       // createNft.src = './images/circledlogo.png';
       // console.log(createNft);
-      document.getElementById("showNFT").src = armyImgUrl;
+      select("#showNFT").src = armyImgUrl;
 
-      document.getElementById("video").style.display = 'none';
+      select("#video").style.display = 'none';
       }, 2000);
     }
 
@@ -433,11 +433,11 @@
         displayText('#pweb3Amount', `${COMMA(INT(val))}`);
 
         if(val < 29483333) {
-          document.getElementById('minerImage').src = '/images/Group_68.png'
+          select('#minerImage').src = '/images/Group_68.png'
         } if(val > 29483333) {
-          document.getElementById('minerImage').src = '/images/Group_67.png'
+          select('#minerImage').src = '/images/Group_67.png'
         } if(val >= 58966666){
-          document.getElementById('minerImage').src = '/images/Group_66.png'
+          select('#minerImage').src = '/images/Group_66.png'
         }
     }
 

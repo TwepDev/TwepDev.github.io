@@ -27,7 +27,7 @@ function takeScreenShot(id,hwID) {
           reader.readAsDataURL(dataUrl2);
           reader.onloadend = function () {
             var base64data = reader.result;
-            document.getElementById("dataimg").src = base64data;        
+            select("#dataimg").src = base64data;        
 
           }
 
@@ -77,7 +77,7 @@ function imgCopyAndDownload() {
 }
 
 function clearModalData() {
-  document.getElementById("dataimg").src = '';
+  select("#dataimg").src = '';
   $("#"+imgID)[0].style.display = 'none';
 }
 
@@ -100,10 +100,11 @@ function show() {
 }
 
 function executefunction() {
-  var checkboxValue = document.getElementById("hm-burg").checked;
-  var side = document.querySelector(".side-nav");
+  var checkboxValue = select("#hm-burg").checked;
+  var side = select("#side-nav");
   $(document).ready(function () {
     if (checkboxValue == true) {
+      select('#side-nav').add
       $("#nav").addClass("side-bar");
       $(".body").addClass("longscroll");
       side.classList.add("h-set");
@@ -139,7 +140,7 @@ $(document).ready(function () {
 });
 
 function turnOnfunction() {
-  var checkTurnMsg = document.getElementById("turnon").checked;
+  var checkTurnMsg = select("#turnon").checked;
   $(document).ready(function () {
     if (checkTurnMsg == true) {
       $('.turnmsg').html("Turn off alerts")

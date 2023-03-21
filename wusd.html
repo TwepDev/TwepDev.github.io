@@ -482,10 +482,10 @@ activateTab(opentab)
     </style>
    
    <script>
-    let copyButton2 = document.getElementById('copytext3');
+    let copyButton2 = select('#copytext3');
 
 copyButton2.addEventListener('click', (event) => {
-  let content2 = document.getElementById('content-copy2').textContent;
+  let content2 = select('#content-copy2').textContent;
   navigator.clipboard.writeText(content2)
 })
    </script>

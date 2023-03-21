@@ -438,14 +438,14 @@ displayAvatarPage();
 
 
 function changeCount(state) {
-    let num = parseInt(document.getElementById("boxCount").innerHTML);
+    let num = parseInt(select("#boxCount").innerHTML);
     
     if(state == "add") {
-        document.getElementById("boxCount").innerHTML = num + 1;
+        select("#boxCount").innerHTML = num + 1;
     }
     else {
         if(num > 0) {
-            document.getElementById("boxCount").innerHTML = num - 1;
+            select("#boxCount").innerHTML = num - 1;
         }
     }
 }
@@ -495,14 +495,14 @@ function showOutputImage() {
 }
 
 function download(){
-    /* var canvas = document.getElementById("combined-output-img");
+    /* var canvas = select("#combined-output-img");
     image = canvas.toDataURL("image/png", 1.0).replace("image/png", "image/octet-stream");
     var link = document.createElement('a');
     link.download = "my-image.png";
     link.href = image;
     link.click(); */
     
-    let element = document.getElementById("combined-output-img");
+    let element = select("#combined-output-img");
     let canvas = html2canvas(element);
     let url = canvas.toDataURL("image/png");
     saveCapture(url);

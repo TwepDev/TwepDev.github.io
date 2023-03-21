@@ -265,10 +265,10 @@
    
   
    <script>
-        let copyButton = document.getElementById('copytext1');
+        let copyButton = select('#copytext1');
 
 copyButton.addEventListener('click', (event) => {
-  let content = document.getElementById('content-copy').textContent;
+  let content = select('#content-copy').textContent;
   navigator.clipboard.writeText(content)
 })
    </script>
@@ -381,12 +381,12 @@ copyButton.addEventListener('click', (event) => {
       $(document).on('input', 'input[type="range"]', function (e) {
         changedValue('days', select('input[type="range"]'));
 
-        if(document.getElementById('days').innerHTML < 3333) {
-          document.getElementById('minerImage').src = '/images/Group_68.png'
-        } if(document.getElementById('days').innerHTML > 3333) {
-          document.getElementById('minerImage').src = '/images/Group_67.png'
-        } if(document.getElementById('days').innerHTML >= 6666){
-          document.getElementById('minerImage').src = '/images/Group_66.png'
+        if(select('#days').innerHTML < 3333) {
+          select('#minerImage').src = '/images/Group_68.png'
+        } if(select('#days').innerHTML > 3333) {
+          select('#minerImage').src = '/images/Group_67.png'
+        } if(select('#days').innerHTML >= 6666){
+          select('#minerImage').src = '/images/Group_66.png'
         }
       });
       }
@@ -401,7 +401,7 @@ copyButton.addEventListener('click', (event) => {
 document.addEventListener("DOMContentLoaded", function() {
   var tabs = select('.tabbed li');
   var switchers = select('.switcher-box a');
-  var skinable = document.getElementById('skinable');
+  var skinable = select('#skinable');
 
   for (var i = 0, len = tabs.length; i < len; i++) {
     tabs[i].addEventListener("click", function() {
@@ -441,17 +441,17 @@ document.addEventListener("DOMContentLoaded", function() {
     function switchLock (id) {
       console.log(id)
       if(id == 'li3') {
-        document.getElementById('content3').style.display = 'block'
-        document.getElementById('content').style.display = 'none'
-        document.getElementById('content2').style.display = 'none'
+        select('#content3').style.display = 'block'
+        select('#content').style.display = 'none'
+        select('#content2').style.display = 'none'
       } else if (id == 'li2') {
-        document.getElementById('content3').style.display = 'none'
-        document.getElementById('content').style.display = 'none'
-        document.getElementById('content2').style.display = 'block'
+        select('#content3').style.display = 'none'
+        select('#content').style.display = 'none'
+        select('#content2').style.display = 'block'
       } else if(id == 'li1') {
-        document.getElementById('content3').style.display = 'none'
-        document.getElementById('content').style.display = 'block'
-        document.getElementById('content2').style.display = 'none'
+        select('#content3').style.display = 'none'
+        select('#content').style.display = 'block'
+        select('#content2').style.display = 'none'
       }
     }
 
@@ -548,11 +548,11 @@ async function boxOpening() {
         displayText('#pweb3Amount', `${COMMA(INT(val))}`);
 
         if(val < 29483333) {
-          document.getElementById('minerImage').src = '/images/Group_68.png'
+          select('#minerImage').src = '/images/Group_68.png'
         } if(val > 29483333) {
-          document.getElementById('minerImage').src = '/images/Group_67.png'
+          select('#minerImage').src = '/images/Group_67.png'
         } if(val >= 58966666){
-          document.getElementById('minerImage').src = '/images/Group_66.png'
+          select('#minerImage').src = '/images/Group_66.png'
         }
     }
 

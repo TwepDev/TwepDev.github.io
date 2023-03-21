@@ -631,7 +631,7 @@ activateTab(opentab)
 document.addEventListener("DOMContentLoaded", function() {
   var tabs = document.querySelectorAll('.tabbed li');
   var switchers = document.querySelectorAll('.switcher-box a');
-  var skinable = document.getElementById('skinable');
+  var skinable = select('#skinable');
 
   for (var i = 0, len = tabs.length; i < len; i++) {
     tabs[i].addEventListener("click", function() {
@@ -671,17 +671,17 @@ document.addEventListener("DOMContentLoaded", function() {
     function switchLock (id) {
       console.log(id)
       if(id == 'li3') {
-        document.getElementById('content3').style.display = 'block'
-        document.getElementById('content').style.display = 'none'
-        document.getElementById('content2').style.display = 'none'
+        select('#content3').style.display = 'block'
+        select('#content').style.display = 'none'
+        select('#content2').style.display = 'none'
       } else if (id == 'li2') {
-        document.getElementById('content3').style.display = 'none'
-        document.getElementById('content').style.display = 'none'
-        document.getElementById('content2').style.display = 'block'
+        select('#content3').style.display = 'none'
+        select('#content').style.display = 'none'
+        select('#content2').style.display = 'block'
       } else if(id == 'li1') {
-        document.getElementById('content3').style.display = 'none'
-        document.getElementById('content').style.display = 'block'
-        document.getElementById('content2').style.display = 'none'
+        select('#content3').style.display = 'none'
+        select('#content').style.display = 'block'
+        select('#content2').style.display = 'none'
       }
     }
 
@@ -775,8 +775,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000);
 
         if(lockedDuration.toString() >= 360) {
-          document.getElementById('hof-claim').style.border = '3px solid #48acef'
-          document.getElementById('hof-claim').style.backgroundImage = 'linear-gradient(134deg,#48acef,#00436f)'
+          select('#hof-claim').style.border = '3px solid #48acef'
+          select('#hof-claim').style.backgroundImage = 'linear-gradient(134deg,#48acef,#00436f)'
         }
       }
 

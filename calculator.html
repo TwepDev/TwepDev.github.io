@@ -194,7 +194,7 @@
    <script type="text/javascript" src="js/index.js"></script>
    
    <script>
-      document.getElementById("rangeCal").oninput = function () {
+      select("#rangeCal").oninput = function () {
   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
   this.style.background =
     "linear-gradient(to right, #22d4f3 0%, #22d4f3 " +
@@ -204,8 +204,8 @@
     "%, #113048 100%)";
 };
 
-const rangeCal = document.getElementById("rangeCal"),
-  daysValCal = document.getElementById("daysValCal"),
+const rangeCal = select("#rangeCal"),
+  daysValCal = select("#daysValCal"),
   setValue = () => {
     const newValue = Number(
       ((rangeCal.value - rangeCal.min) * 89) / (rangeCal.max - rangeCal.min)
@@ -235,14 +235,14 @@ rangeCal.addEventListener("input", setValue);
    <script src="js/global.js"></script>
    <script src="js/page.js"></script>
    <script>
-      document.getElementById("showSidebar").addEventListener("click", function () {
-        document.getElementById("sidebarContainer").classList.add("show");
-        document.getElementById("overlay").style.display = "block"
+      select("#showSidebar").addEventListener("click", function () {
+        select("#sidebarContainer").classList.add("show");
+        select("#overlay").style.display = "block"
       })
   
-      document.getElementById("overlay").addEventListener("click", function () {
-        document.getElementById("sidebarContainer").classList.remove("show");
-        document.getElementById("overlay").style.display = "none"
+      select("#overlay").addEventListener("click", function () {
+        select("#sidebarContainer").classList.remove("show");
+        select("#overlay").style.display = "none"
       })
     </script>
    <script>
@@ -332,12 +332,12 @@ rangeCal.addEventListener("input", setValue);
       $(document).on('input', 'input[type="range"]', function (e) {
         changedValue('days', select('input[type="range"]'));
 
-        if(document.getElementById('days').innerHTML < 3333) {
-          document.getElementById('minerImage').src = '/images/Group_68.png'
-        } if(document.getElementById('days').innerHTML > 3333) {
-          document.getElementById('minerImage').src = '/images/Group_67.png'
-        } if(document.getElementById('days').innerHTML >= 6666){
-          document.getElementById('minerImage').src = '/images/Group_66.png'
+        if(select('#days').innerHTML < 3333) {
+          select('#minerImage').src = '/images/Group_68.png'
+        } if(select('#days').innerHTML > 3333) {
+          select('#minerImage').src = '/images/Group_67.png'
+        } if(select('#days').innerHTML >= 6666){
+          select('#minerImage').src = '/images/Group_66.png'
         }
       });
       }
@@ -352,7 +352,7 @@ rangeCal.addEventListener("input", setValue);
 document.addEventListener("DOMContentLoaded", function() {
   var tabs = document.querySelectorAll('.tabbed li');
   var switchers = document.querySelectorAll('.switcher-box a');
-  var skinable = document.getElementById('skinable');
+  var skinable = select('#skinable');
 
   for (var i = 0, len = tabs.length; i < len; i++) {
     tabs[i].addEventListener("click", function() {
@@ -392,17 +392,17 @@ document.addEventListener("DOMContentLoaded", function() {
     function switchLock (id) {
       console.log(id)
       if(id == 'li3') {
-        document.getElementById('content3').style.display = 'block'
-        document.getElementById('content').style.display = 'none'
-        document.getElementById('content2').style.display = 'none'
+        select('#content3').style.display = 'block'
+        select('#content').style.display = 'none'
+        select('#content2').style.display = 'none'
       } else if (id == 'li2') {
-        document.getElementById('content3').style.display = 'none'
-        document.getElementById('content').style.display = 'none'
-        document.getElementById('content2').style.display = 'block'
+        select('#content3').style.display = 'none'
+        select('#content').style.display = 'none'
+        select('#content2').style.display = 'block'
       } else if(id == 'li1') {
-        document.getElementById('content3').style.display = 'none'
-        document.getElementById('content').style.display = 'block'
-        document.getElementById('content2').style.display = 'none'
+        select('#content3').style.display = 'none'
+        select('#content').style.display = 'block'
+        select('#content2').style.display = 'none'
       }
     }
 
@@ -413,16 +413,16 @@ document.addEventListener("DOMContentLoaded", function() {
 //MINER FUNCTIONS===================================================================================================================================================
 
 function showValue1(newValue) {
-        document.getElementById("days").innerHTML= newValue;
+        select("#days").innerHTML= newValue;
       }
 
     function changeRangeValue(val){
-        document.getElementById("days-slider").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        select("#days-slider").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
         showValue1(val);
     }
 
     function changeInputValue(val){
-        document.getElementById("days-sliders").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        select("#days-sliders").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
         showValue1(val);
     }
 
@@ -470,18 +470,18 @@ async function boxOpening() {
           armyImgUrl = armyJsonData['image']
         }
       }
-      document.getElementById("unBox").style.display = 'none';
-      document.getElementById("video").style.display = 'block';
-      vid = document.getElementById("vid");
+      select("#unBox").style.display = 'none';
+      select("#video").style.display = 'block';
+      vid = select("#vid");
       vid.play();
       setInterval(() => {
-      // document.getElementById("unBox").style.display = 'block';
+      // select("#unBox").style.display = 'block';
       // var createNft = document.createElement('img');
       // createNft.src = './images/circledlogo.png';
       // console.log(createNft);
-      document.getElementById("showNFT").src = armyImgUrl;
+      select("#showNFT").src = armyImgUrl;
 
-      document.getElementById("video").style.display = 'none';
+      select("#video").style.display = 'none';
       }, 2000);
     }
     function checkValue(val) {
@@ -499,11 +499,11 @@ async function boxOpening() {
         displayText('#pweb3Amount', `${COMMA(INT(val))}`);
 
         if(val < 29483333) {
-          document.getElementById('minerImage').src = '/images/Group_68.png'
+          select('#minerImage').src = '/images/Group_68.png'
         } if(val > 29483333) {
-          document.getElementById('minerImage').src = '/images/Group_67.png'
+          select('#minerImage').src = '/images/Group_67.png'
         } if(val >= 58966666){
-          document.getElementById('minerImage').src = '/images/Group_66.png'
+          select('#minerImage').src = '/images/Group_66.png'
         }
     }
 

@@ -166,10 +166,10 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js" integrity="sha512-wUa0ktp10dgVVhWdRVfcUO4vHS0ryT42WOEcXjVVF2+2rcYBKTY7Yx7JCEzjWgPV+rj2EDUr8TwsoWF6IoIOPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
    <script type="text/javascript" src="js/index.js"></script>
    <script>
-    let copyButton1 = document.getElementById('copytext2');
+    let copyButton1 = select('#copytext2');
 
 copyButton1.addEventListener('click', (event) => {
-  let content1 = document.getElementById('content-copy1').textContent;
+  let content1 = select('#content-copy1').textContent;
   navigator.clipboard.writeText(content1)
 })
    </script>

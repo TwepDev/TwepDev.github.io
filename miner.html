@@ -137,28 +137,28 @@
       $(document).on('input', 'input[type="range"]', function (e) {
         changedValue('days', select('input[type="range"]'));
 
-        if(document.getElementById('days').innerHTML < 3333) {
-          document.getElementById('minerImage').src = '/images/Group_68.png'
-        } if(document.getElementById('days').innerHTML > 3333) {
-          document.getElementById('minerImage').src = '/images/Group_67.png'
-        } if(document.getElementById('days').innerHTML >= 6666){
-          document.getElementById('minerImage').src = '/images/Group_66.png'
+        if(select('#days').innerHTML < 3333) {
+          select('#minerImage').src = '/images/Group_68.png'
+        } if(select('#days').innerHTML > 3333) {
+          select('#minerImage').src = '/images/Group_67.png'
+        } if(select('#days').innerHTML >= 6666){
+          select('#minerImage').src = '/images/Group_66.png'
         }
       });
 
     }
 
     function showValue1(newValue) {
-        document.getElementById("days").innerHTML= newValue;
+        select("#days").innerHTML= newValue;
       }
 
     function changeRangeValue(val){
-        document.getElementById("days-slider").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        select("#days-slider").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
         showValue1(val);
     }
 
     function changeInputValue(val){
-        document.getElementById("days-sliders").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
+        select("#days-sliders").value = isNaN(parseInt(val, 10)) ? 0 : parseInt(val, 10);
         showValue1(val);
     }
 
