@@ -77,9 +77,7 @@ function displayWeb3Header() {
   <div class="logo1">
     <a href="https://twepv2.com/"><img src="images/Logo.svg" alt="TWEP-Logo" /></a>
   </div>
-  <div class="head-title">
-  <i class='title-image swap'></i>Swap
-  </div>
+  <div class="head-title"></div>
   <div class="hum-burgur-div" id="test-check-hum">
     <input type="checkbox" class="menu-btn" id="hm-burg" onclick="executefunction()" />
   <label class="menu-icon" for="hm-burg">
