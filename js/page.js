@@ -214,7 +214,7 @@ async function ERR(err, popup = true) {
 }
 
 
-P_D = {};
+let P_D = {};
 let lockedAmount;
 let lockedDuration;
 let totalSupplyPercentage;
@@ -231,15 +231,15 @@ async function _runPersonal() {
   displayText('#connect', SHORTADR(CURADR));
 
   {
-    PD['bnbBalance'] = await getBalance(CURADR);
-    PD['bnbBalance'] = PD['bnbBalance'] / BNBDIV;
-    displayText("#bnbBalance", `${COMMA(INT(PD['bnbBalance'], 3))}`);
+    P_D['bnbBalance'] = await getBalance(CURADR);
+    P_D['bnbBalance'] = P_D['bnbBalance'] / BNBDIV;
+    displayText("#bnbBalance", `${COMMA(INT(P_D['bnbBalance'], 3))}`);
   }
   
   for (let name of ['web3', 'twep', 'wweb3', 'pweb3', 'xweb3', 'wusd', 'busd', 'miner']) {
-    PD[`${name}Balance`] = await CONTS[name].balanceOf(CURADR);
-    PD[`${name}Balance`] = PD[`${name}Balance`] / BNBDIV;
-    displayText(`#${name}Balance`, `${COMMA(INT(PD[`${name}Balance`], 3))}`);
+    P_D[`${name}Balance`] = await CONTS[name].balanceOf(CURADR);
+    P_D[`${name}Balance`] = P_D[`${name}Balance`] / BNBDIV;
+    displayText(`#${name}Balance`, `${COMMA(INT(P_D[`${name}Balance`], 3))}`);
   }
 
   F['xHolding'] = async () => {
